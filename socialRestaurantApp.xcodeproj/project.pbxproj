@@ -13,6 +13,7 @@
 		674198B32AF45360001CC340 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 674198B12AF45360001CC340 /* Main.storyboard */; };
 		674198B52AF45361001CC340 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 674198B42AF45361001CC340 /* Assets.xcassets */; };
 		674198B82AF45361001CC340 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 674198B62AF45361001CC340 /* LaunchScreen.storyboard */; };
+		674198C02AF45613001CC340 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674198BF2AF45613001CC340 /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		674198B42AF45361001CC340 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		674198B72AF45361001CC340 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		674198B92AF45361001CC340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		674198BF2AF45613001CC340 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				674198B42AF45361001CC340 /* Assets.xcassets */,
 				674198B62AF45361001CC340 /* LaunchScreen.storyboard */,
 				674198B92AF45361001CC340 /* Info.plist */,
+				674198BF2AF45613001CC340 /* Config.swift */,
 			);
 			path = socialRestaurantApp;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				674198B02AF45360001CC340 /* ViewController.swift in Sources */,
+				674198C02AF45613001CC340 /* Config.swift in Sources */,
 				674198AC2AF45360001CC340 /* AppDelegate.swift in Sources */,
 				674198AE2AF45360001CC340 /* SceneDelegate.swift in Sources */,
 			);
@@ -307,9 +311,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.socialRestaurantApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -335,9 +342,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.socialRestaurantApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
