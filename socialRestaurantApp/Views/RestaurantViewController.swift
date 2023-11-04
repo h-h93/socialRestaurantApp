@@ -43,7 +43,6 @@ class RestaurantViewController: UIViewController, MKMapViewDelegate, CLLocationM
         
         mapView.pointOfInterestFilter = pointsOfinterestCategory
         mapView.selectableMapFeatures = [.pointsOfInterest]
-
         
     }
     
@@ -93,6 +92,8 @@ class RestaurantViewController: UIViewController, MKMapViewDelegate, CLLocationM
                let restaurantAddress = mapItem?.placemark.location
                let restaurantPhoneNumber = mapItem?.phoneNumber
                let restaurantWebsite = mapItem?.url
+               
+               //mapItem?.openInMaps()
 
                // Display the restaurant details to the user.
            }
