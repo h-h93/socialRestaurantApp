@@ -8,7 +8,6 @@
 import Foundation
 
 struct Config {
-    
-    let gMapApiKey = "AIzaSyAge01zPyCDpswcmymgEgI1Co2TsN11jMo"
+
     
 }
