@@ -11,7 +11,7 @@ import Firebase
 
 // make this a popup view
 
-class LoginViewController: UIViewController {
+class LoginRegisterViewController: UIViewController {
     
     let firebaseDB = FirebaseDB()
     
@@ -115,6 +115,9 @@ class LoginViewController: UIViewController {
         loginButton.addTarget(self, action: #selector(loginTapped), for: .touchUpInside)
         registerButton.addTarget(self, action: #selector(registerTapped), for: .touchUpInside)
         
+        // add notification listener to check if user has logged in
+        NotificationCenter.default.addObserver(self, selector: #selector(isLoggedIn), name: NSNotification.Name("com.login.success"), object: nil)
+        
         setupViewConstraints()
         
     }
@@ -167,8 +170,7 @@ class LoginViewController: UIViewController {
                 sender.backgroundColor = .white
             }
         }
-        
-        guard let email = emailText.text else { return }
+        guard let email = emailText.text?.uppercased() else { return }
         guard let password = passwordText.text else { return }
         if isValidEmail(email) && isValidPassword(password) {
             firebaseDB.login(email: email, password: password)
@@ -186,13 +188,16 @@ class LoginViewController: UIViewController {
             }
         }
         
-        guard let email = emailText.text else { return }
+        guard let email = emailText.text?.uppercased() else { return }
         guard let password = passwordText.text else { return }
         if isValidEmail(email) && isValidPassword(password) {
             firebaseDB.createNewUser(email: email, password: password)
         }
     }
     
+    @objc func isLoggedIn() {
+        dismiss(animated: true)
+    }
     
     
     // check if email is valid

@@ -15,6 +15,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        if #available(iOS 15, *) {
+            // MARK: Navigation bar appearance
+            let navigationBarAppearance = UINavigationBarAppearance()
+            navigationBarAppearance.configureWithOpaqueBackground()
+            navigationBarAppearance.titleTextAttributes = [
+                NSAttributedString.Key.foregroundColor : UIColor.clear
+            ]
+            navigationBarAppearance.backgroundColor = UIColor.clear
+            UINavigationBar.appearance().standardAppearance = navigationBarAppearance
+            UINavigationBar.appearance().compactAppearance = navigationBarAppearance
+            UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
+            
+            // MARK: Tab bar appearance
+            let tabBarAppearance = UITabBarAppearance()
+            tabBarAppearance.configureWithOpaqueBackground()
+            tabBarAppearance.backgroundColor = UIColor.clear
+            UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
+            UITabBar.appearance().standardAppearance = tabBarAppearance
+        }
         FirebaseApp.configure()
         return true
     }

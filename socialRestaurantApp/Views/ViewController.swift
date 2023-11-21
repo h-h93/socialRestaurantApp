@@ -11,9 +11,7 @@ class ViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tabBar.isTranslucent = false
-        tabBar.backgroundColor = .white
+
         
         let restaurantViewController = RestaurantViewController()
         let friendsViewController = FriendsViewController()
